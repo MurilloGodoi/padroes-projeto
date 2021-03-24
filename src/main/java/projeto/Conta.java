@@ -11,17 +11,28 @@ public abstract class Conta {
     this.cliente = cliente;
   }
 
-  abstract void sacar(Double valorSacado);
-
-  abstract void depositar(Double valorDepositado);
+  void sacar(Double valorSacado) {
+    this.saldo -= valorSacado;
+  }
+  
+  void depositar(Double valorDepositado) {
+    this.saldo += valorDepositado;
+  }
 
   public Double getSaldo() {
     return saldo;
   }
 
+  public Integer getNumero() {
+    return numero;
+  }
+
+  public Cliente getCliente() {
+    return cliente;
+  }
+  
   @Override
   public String toString() {
     return "Conta [cliente=" + cliente + ", numero=" + numero + ", saldo=" + saldo + "]";
   }
-
 }
