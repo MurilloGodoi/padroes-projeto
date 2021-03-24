@@ -13,18 +13,6 @@ public class ContaPoupanca extends Conta {
   }
 
   @Override
-  void sacar(Double valorSacado) {
-    this.saldo -= valorSacado;
-
-  }
-
-  @Override
-  void depositar(Double valorDepositado) {
-    this.saldo += valorDepositado;
-
-  }
-
-  @Override
   public String toString() {
     return "ContaPoupanca[cliente=" + cliente + ", numero=" + numero + ", saldo=" + saldo + ", dataAniversaio="
         + dataAniversario + "]";

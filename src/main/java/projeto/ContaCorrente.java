@@ -12,16 +12,10 @@ public class ContaCorrente extends Conta {
     return limite;
   }
 
-  @Override
-  void sacar(Double valorSacado) {
-    this.saldo -= valorSacado;
+  public void setLimite(Double limite) {
+    this.limite = limite;
   }
-
-  @Override
-  void depositar(Double valorDepositado) {
-    this.saldo += valorDepositado;
-  }
-
+  
   @Override
   public String toString() {
     return "ContaCorrente [cliente=" + cliente + ", numero=" + numero + ", saldo=" + saldo + ", limite=" + limite + "]";
