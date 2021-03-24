@@ -5,6 +5,12 @@ public class Cliente {
   private String nome;
   private String dataNascimento;
 
+  public Cliente(Integer id, String nome, String dataNascimento) {
+    this.id = id;
+    this.nome = nome;
+    this.dataNascimento = dataNascimento;
+  }
+
   public Integer getId() {
     return id;
   }
@@ -27,5 +33,10 @@ public class Cliente {
 
   public void setDataNascimento(String dataNascimento) {
     this.dataNascimento = dataNascimento;
+  }
+
+  @Override
+  public String toString() {
+    return "Cliente [dataNascimento=" + dataNascimento + ", id=" + id + ", nome=" + nome + "]";
   }
 }
