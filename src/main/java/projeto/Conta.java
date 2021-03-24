@@ -1,9 +1,9 @@
 package projeto;
 
-public class Conta {
-  private Double saldo;
-  private Integer numero;
-  private Cliente cliente;
+public abstract class Conta {
+  protected Double saldo;
+  protected Integer numero;
+  protected Cliente cliente;
 
   public Conta(Double saldo, Integer numero, Cliente cliente) {
     this.saldo = saldo;
@@ -11,13 +11,9 @@ public class Conta {
     this.cliente = cliente;
   }
 
-  private void sacar(Double valorSacado) {
-    this.saldo -= valorSacado;
-  }
+  abstract void sacar(Double valorSacado);
 
-  private void depositar(Double valorDepositado) {
-    this.saldo += valorDepositado;
-  }
+  abstract void depositar(Double valorDepositado);
 
   public Double getSaldo() {
     return saldo;
