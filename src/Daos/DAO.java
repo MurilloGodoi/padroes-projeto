@@ -4,6 +4,8 @@ public interface DAO<T> {
 	
 	public void adicionarCliente(T o);
 
+  public boolean realizarLogin(T o);
+
   public void sacar(T o);
 
   public void depositar(T o);
