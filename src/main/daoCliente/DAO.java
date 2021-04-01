@@ -1,4 +1,4 @@
-package projeto;
+package daoCliente;
 
 import java.util.List;
 

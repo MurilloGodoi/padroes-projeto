@@ -1,4 +1,4 @@
-package projeto;
+package Models;
 
 public class ContaCorrente extends Conta {
   private Double limite;

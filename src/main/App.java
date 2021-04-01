@@ -1,4 +1,6 @@
-package projeto;
+import Models.Cliente;
+import Models.ContaCorrente;
+import Models.ContaPoupanca;
 
 /**
  * Hello world!
@@ -8,7 +10,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        Cliente murillo = new Cliente(1, "Murillo Godoi", "27/12/2000");
+        Cliente murillo = new Cliente("Murillo Godoi", "27/12/2000", "123456");
         System.out.println(murillo.toString());
         System.out.println(" ");
 

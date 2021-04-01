@@ -1,20 +1,19 @@
-package projeto;
+package daoContas;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
-import conexao.ConnectionFactory;
-import Models.ContaCorrente;
 import Models.Cliente;
+import Models.ContaCorrente;
+import conexao.ConnectionFactory;
+
 
 public class ContaCorrenteDAO implements DAOConta<ContaCorrente> {
   private Connection connection;
 
-  public ClienteDAO() {
+  public ContaCorrenteDAO() {
     this.connection = new ConnectionFactory().getConnection();
   }
 
@@ -23,7 +22,7 @@ public class ContaCorrenteDAO implements DAOConta<ContaCorrente> {
   public Double getSaldo(ContaCorrente conta) {
     String sql = "select saldo from ContaCorrente where client_id = ?";
     try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-      preparedStatement.setString(1, cliente.getNome());
+      preparedStatement.setString(1, conta.getNome());
 
       preparedStatement.execute();
     } catch (SQLException e) {
@@ -45,4 +44,11 @@ public class ContaCorrenteDAO implements DAOConta<ContaCorrente> {
     }
   }
 
+  @Override
+
+  public List<ContaCorrente> getListaTodosClientes() {
+
+    return;
+
+}
 }

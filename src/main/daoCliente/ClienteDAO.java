@@ -1,4 +1,4 @@
-package projeto;
+package daoCliente;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

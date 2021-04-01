@@ -1,4 +1,4 @@
-package projeto;
+package daoContas;
 
 import java.util.List;
 

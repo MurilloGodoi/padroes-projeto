@@ -1,4 +1,4 @@
-package projeto;
+package daoContas;
 
 public class ContaPoupancaDAO {
   

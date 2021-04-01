@@ -1,4 +1,4 @@
-package projeto;
+package Models;
 
 public abstract class Conta {
   protected Double saldo;
@@ -13,11 +13,11 @@ public abstract class Conta {
     this.cliente = cliente;
   }
 
-  void sacar(Double valorSacado) {
+  public void sacar(Double valorSacado) {
     this.saldo -= valorSacado;
   }
   
-  void depositar(Double valorDepositado) {
+  public void depositar(Double valorDepositado) {
     this.saldo += valorDepositado;
   }
 
