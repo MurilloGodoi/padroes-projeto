@@ -6,7 +6,7 @@ import javax.management.RuntimeErrorException;
 public class ConnectionFactory {
   public Connection getConnection() {
     try {
-      return DriverManager.getConnection(url, user, password);
+      return DriverManager.getConnection("jdbc:mysql://localhost/d2mbank","root","password");
     } catch (SQLException e) {
       e.printStackTrace();
       throw new RuntimeErrorException(e);
