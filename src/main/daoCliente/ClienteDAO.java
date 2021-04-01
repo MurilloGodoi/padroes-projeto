@@ -41,10 +41,10 @@ public class ClienteDAO implements DAO<Cliente> {
       preparedStatement.setString(2, cliente.getSenha());
       ResultSet resultSet = preparedStatement.executeQuery();
 
-      if (resultSet)
-        return 1;
+      if (resultSet != null)
+        return true;
         
-      return 0;
+      return false;
     } catch (SQLException e) {
       throw new RuntimeException(e);
     }
@@ -63,7 +63,8 @@ public class ClienteDAO implements DAO<Cliente> {
         String nome = resultSet.getString("nome");
         String dataNascimento = resultSet.getString("data_nascimento");
         String senha = resultSet.getString("senha");
-        Cliente cliente = new Cliente(id, nome, dataNascimento, senha);
+        Cliente cliente = new Cliente(nome, dataNascimento, senha);
+        cliente.setId(id);
 
         clientes.add(cliente);
       }
