@@ -6,12 +6,6 @@ public interface DAO<T> {
 
   public boolean realizarLogin(T o);
 
-  public void sacar(T o);
-
-  public void depositar(T o);
-
-  public double getSaldo(T o);
-
 	public List<T> getListaTodosClientes();
 	
 }
