@@ -62,6 +62,7 @@ public class ClienteDAO implements DAO<Cliente> {
         Integer id = resultSet.getInt("id");
         String nome = resultSet.getString("nome");
         String dataNascimento = resultSet.getString("data_nascimento");
+        String senha = resultSet.getString("senha");
         Cliente cliente = new Cliente(id, nome, dataNascimento, senha);
 
         clientes.add(cliente);
