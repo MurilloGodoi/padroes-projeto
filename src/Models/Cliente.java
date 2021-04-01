@@ -6,8 +6,7 @@ public class Cliente {
   private String dataNascimento;
   private String senha;
 
-  public Cliente(Integer id, String nome, String dataNascimento, String senha) {
-    this.id = id;
+  public Cliente(String nome, String dataNascimento, String senha) {
     this.nome = nome;
     this.dataNascimento = dataNascimento;
     this.senha = senha;
