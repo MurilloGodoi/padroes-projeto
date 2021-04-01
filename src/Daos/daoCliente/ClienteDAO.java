@@ -37,14 +37,14 @@ public class ClienteDAO implements DAO<Cliente> {
       preparedStatement.setString(1, cliente.getNome());
       preparedStatement.setString(2, cliente.getSenha());
       ResultSet resultSet = preparedStatement.executeQuery();
+
+      if (resultSet)
+        return 1;
+        
+      return 0;
     } catch (SQLException e) {
       throw new RuntimeException(e);
     }
-
-    if (resultSet)
-      return 1;
-
-    return 0;
   }
 
   @Override
@@ -63,10 +63,11 @@ public class ClienteDAO implements DAO<Cliente> {
 
         clientes.add(cliente);
       }
+      return clientes;
+
     } catch (SQLException e) {
       throw new RuntimeException(e);
     }
 
-    return clientes;
   }
 }
