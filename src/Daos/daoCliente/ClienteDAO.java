@@ -1,3 +1,5 @@
+package projeto;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,10 +20,11 @@ public class ClienteDAO implements DAO<Cliente> {
   @Override
 
   public void adicionarCliente(Cliente cliente) {
-    String sql = "insert into clientes (nome, data_nascimento) values (? ,?)";
+    String sql = "insert into clientes (nome, data_nascimento, senha) values (? ,?, ?)";
     try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
       preparedStatement.setString(1, cliente.getNome());
       preparedStatement.setString(2, cliente.getDataNascimento());
+      preparedStatement.setString(3, cliente.getSenha());
 
       preparedStatement.execute();
     } catch (SQLException e) {
