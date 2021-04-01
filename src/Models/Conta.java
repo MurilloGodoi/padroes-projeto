@@ -4,6 +4,8 @@ public abstract class Conta {
   protected Double saldo;
   protected Integer numero;
   protected Cliente cliente;
+  protected Integer id;
+  protected Integer userId;
 
   public Conta(Double saldo, Integer numero, Cliente cliente) {
     this.saldo = saldo;
@@ -29,6 +31,22 @@ public abstract class Conta {
 
   public Cliente getCliente() {
     return cliente;
+  }
+
+  public Integer getId() {
+    return id;
+  }
+
+  public void setId(Integer id) {
+    this.id = id;
+  }
+
+  public Integer getUserId() {
+    return userId;
+  }
+
+  public void setUserId(Integer userId) {
+    this.userId = userId;
   }
   
   @Override
