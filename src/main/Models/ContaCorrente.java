@@ -3,8 +3,8 @@ package Models;
 public class ContaCorrente extends Conta {
   private Double limite;
 
-  public ContaCorrente(Double saldo, Integer numero, Cliente cliente, Double limite) {
-    super(saldo, numero, cliente);
+  public ContaCorrente(Double saldo, Integer numero, Double limite) {
+    super(saldo, numero);
     this.limite = limite;
   }
 
@@ -15,9 +15,9 @@ public class ContaCorrente extends Conta {
   public void setLimite(Double limite) {
     this.limite = limite;
   }
-  
+
   @Override
   public String toString() {
-    return "ContaCorrente [cliente=" + cliente + ", numero=" + numero + ", saldo=" + saldo + ", limite=" + limite + "]";
+    return "ContaCorrente [ numero=" + numero + ", saldo=" + saldo + ", limite=" + limite + "]";
   }
 }

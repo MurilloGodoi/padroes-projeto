@@ -3,20 +3,18 @@ package Models;
 public abstract class Conta {
   protected Double saldo;
   protected Integer numero;
-  protected Cliente cliente;
   protected Integer id;
-  protected Integer userId;
+  protected Integer clienteId;
 
-  public Conta(Double saldo, Integer numero, Cliente cliente) {
+  public Conta(Double saldo, Integer numero) {
     this.saldo = saldo;
     this.numero = numero;
-    this.cliente = cliente;
   }
 
   public void sacar(Double valorSacado) {
     this.saldo -= valorSacado;
   }
-  
+
   public void depositar(Double valorDepositado) {
     this.saldo += valorDepositado;
   }
@@ -29,10 +27,6 @@ public abstract class Conta {
     return numero;
   }
 
-  public Cliente getCliente() {
-    return cliente;
-  }
-
   public Integer getId() {
     return id;
   }
@@ -41,16 +35,16 @@ public abstract class Conta {
     this.id = id;
   }
 
-  public Integer getUserId() {
-    return userId;
+  public Integer getClienteId() {
+    return clienteId;
   }
 
-  public void setUserId(Integer userId) {
-    this.userId = userId;
+  public void setClienteId(Integer clienteId) {
+    this.clienteId = clienteId;
   }
-  
+
   @Override
   public String toString() {
-    return "Conta [cliente=" + cliente + ", numero=" + numero + ", saldo=" + saldo + "]";
+    return "Conta [numero=" + numero + ", saldo=" + saldo + "]";
   }
 }
