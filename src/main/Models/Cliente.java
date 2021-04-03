@@ -36,7 +36,7 @@ public class Cliente {
     this.dataNascimento = dataNascimento;
   }
 
-  public String getSenha () {
+  public String getSenha() {
     return senha;
   }
 
