@@ -2,15 +2,15 @@ package daoContas;
 
 import java.util.List;
 
-public interface DAOConta<T> {
+public interface DAOConta<T, J> {
 
-  public void criarConta(T o);
+  public void criarConta(T o, J ob);
 
-  public Double getSaldo(T o);
+  public Double getSaldo(J ob);
 
-  public void sacar(T o);
+  public void sacar(J ob, Double valorDoSaque);
 
-  public void depositar(T o);
+  public void depositar(J ob, Double valorDepositado);
 
   public List<T> getListaTodosClientes();
 
